@@ -15,13 +15,13 @@ function Analytics() {
           <h3 className="text-lg font-semibold mb-2 text-gray-800 dark:text-white">
             Revenue
           </h3>
-          <p className="text-3xl font-bold text-yellow-500">$15,678</p>
+          <p className="text-3xl font-bold text-yellow-500">€15,678</p>
         </div>
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
           <h3 className="text-lg font-semibold mb-2 text-gray-800 dark:text-white">
             Average Order Value
           </h3>
-          <p className="text-3xl font-bold text-yellow-500">$12.70</p>
+          <p className="text-3xl font-bold text-yellow-500">€12.70</p>
         </div>
       </div>
       <div className="mt-8 bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">

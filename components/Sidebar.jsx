@@ -1,8 +1,7 @@
-import { BarChart2, Coffee, X } from "lucide-react";
-import Image from "next/image";
+import { BarChart2, Coffee, FileImage, X } from "lucide-react";
+import Link from "next/link";
 
-const Sidebar = ({isSidebarOpen, closeSidebar, activeTab, setActiveTab}) => {
-
+const Sidebar = ({ isSidebarOpen, closeSidebar, activeTab, setActiveTab }) => {
   return (
     <div
       className={`${
@@ -21,13 +20,13 @@ const Sidebar = ({isSidebarOpen, closeSidebar, activeTab, setActiveTab}) => {
         </button>
       </div>
       <nav className="mt-5">
-        <a
+        <Link
           className={`flex items-center mt-4 py-2 px-6 ${
             activeTab === "analytics"
               ? "bg-yellow-100 dark: bg-yellow-900 text-yellow-900 dark:text-yellow-100"
               : "text-gray-500 hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-700"
           }`}
-          href="#"
+          href="/analytics"
           onClick={() => {
             setActiveTab("analytics");
             closeSidebar();
@@ -35,14 +34,14 @@ const Sidebar = ({isSidebarOpen, closeSidebar, activeTab, setActiveTab}) => {
         >
           <BarChart2 className="h-5 w-5" />
           <span className="mx-3">Analytics</span>
-        </a>
-        <a
+        </Link>
+        <Link
           className={`flex items-center mt-4 py-2 px-6 ${
             activeTab === "menu"
               ? "bg-yellow-100 dark:bg-yellow-900 text-yellow-900 dark:text-yellow-100"
               : "text-gray-500 hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-700"
           }`}
-          href="#"
+          href="/menu"
           onClick={() => {
             setActiveTab("menu");
             closeSidebar();
@@ -50,22 +49,22 @@ const Sidebar = ({isSidebarOpen, closeSidebar, activeTab, setActiveTab}) => {
         >
           <Coffee className="h-5 w-5" />
           <span className="mx-3">Menu Items</span>
-        </a>
-        <a
+        </Link>
+        <Link
           className={`flex items-center mt-4 py-2 px-6 ${
             activeTab === "photos"
               ? "bg-yellow-100 dark:bg-yellow-900 text-yellow-900 dark:text-yellow-100"
               : "text-gray-500 hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-700"
           }`}
-          href="#"
+          href="/photos"
           onClick={() => {
             setActiveTab("photos");
             closeSidebar();
           }}
         >
-          <Image className="h-5 w-5" />
+          <FileImage className="h-5 w-5" />
           <span className="mx-3">Photos</span>
-        </a>
+        </Link>
       </nav>
     </div>
   );

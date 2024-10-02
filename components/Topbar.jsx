@@ -3,19 +3,8 @@
 import { Menu, Sun, Moon } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
 
 const Topbar = ({ toggleSidebar, theme, toggleTheme }) => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
-
   return (
     <header className="flex justify-between items-center py-4 px-6 bg-white dark:bg-gray-800 border-b-4 border-yellow-500">
       <div className="flex items-center">
